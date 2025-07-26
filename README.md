@@ -1,14 +1,61 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# 💸 Cashi Payment App (KMP)
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+This is a cross-platform FinTech app built with Kotlin Multiplatform (KMP), designed to allow users to send payments and view transaction history.
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+---
 
+## 🚀 Features
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+- 🔁 **Send Payment**  
+  Users can send payments by entering:
+  - Email
+  - Amount
+  - Currency (USD, EUR)
+
+- 📜 **Transaction History**  
+  Real-time updates of sent payments from **Firebase Firestore**
+
+- ☁️ **Backend API**  
+  Integrated with a deployed REST API hosted on Render:  
+  `POST https://transaction-api-hcyc.onrender.com/transaction`
+
+- 🌐 **Cross-Platform (KMP)**  
+  Shared business logic between Android and iOS with `expect/actual` declarations for platform-specific code
+
+- 🧪 **(Optional) BDD Tests**  
+  Support for Cucumber-based behavior-driven development in the shared business module
+
+---
+
+## 🧱 Tech Stack
+
+| Layer              | Tech                                  |
+|-------------------|----------------------------------------|
+| UI (Android)       | Jetpack Compose Multiplatform         |
+| Networking         | Ktor                                  |
+| DI                 | Koin                                  |
+| Shared Logic       | Kotlin Multiplatform                   |
+| Backend API        | Node.js + Express (hosted on Render)  |
+| Realtime DB        | Firebase Firestore                    |
+| Testing (optional) | Cucumber, JUnit, JMeter, Appium       |
+
+---
+
+## 🛠️ Architecture
+
+:androidApp/
+├── Main UI (Compose)
+├── Screens: SendPaymentScreen, TransactionsHistoryScreen
+
+:business/
+├── Use Cases
+│ └── SendPaymentUseCase
+│ └── GetTransactionsUseCase
+
+:repository/
+├── Network Layer (Ktor)
+├── Firestore Integration
+├── TransactionRepository.kt
+
+:network/
+├── Ktor client setup & wrapper
