@@ -59,3 +59,10 @@ This is a cross-platform FinTech app built with Kotlin Multiplatform (KMP), desi
 
 :network/
 ├── Ktor client setup & wrapper
+
+## Demo 
+
+
+https://github.com/user-attachments/assets/f2a90517-2142-42c8-8c70-7683d67d0c9f
+
+
