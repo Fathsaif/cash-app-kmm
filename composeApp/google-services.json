@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490797007440",
+    "project_id": "cashiapp-ac511",
+    "storage_bucket": "cashiapp-ac511.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490797007440:android:06cf2d4de80189517dc755",
+        "android_client_info": {
+          "package_name": "com.saif.cashiapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBOA7WIRVSkEhN-yZTWbHKQRdBoylhSHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
