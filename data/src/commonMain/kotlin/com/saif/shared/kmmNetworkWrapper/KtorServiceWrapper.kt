@@ -93,6 +93,5 @@ class KtorServiceWrapper(
             println(ex.message)
             handleThrowable(ex)
         }
-
     }
 }

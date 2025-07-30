@@ -49,7 +49,6 @@ internal class KtorHttpClientBuilder() :
                 })
             }
 
-
             defaultRequest {
 
                 url {
@@ -73,7 +72,6 @@ internal class KtorHttpClientBuilder() :
                 }
                 level = LogLevel.ALL
             }
-
 
             HttpResponseValidator {
                 validateResponse { response ->

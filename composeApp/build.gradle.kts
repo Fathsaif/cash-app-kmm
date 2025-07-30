@@ -49,7 +49,6 @@ kotlin {
             implementation("io.insert-koin:koin-compose:1.1.0")
 
             implementation(project(":business"))
-            implementation(project(":data"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
